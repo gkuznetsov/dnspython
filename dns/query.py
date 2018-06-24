@@ -465,7 +465,7 @@ def tcp(q, where, timeout=None, port=53, af=None, source=None, source_port=0,
     received_time = None
     try:
         expiration = _compute_expiration(timeout)
-        s.setblocking(0)
+        # s.setblocking(0)
         begin_time = time.time()
         if source is not None:
             s.bind(source)
