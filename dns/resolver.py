@@ -899,7 +899,8 @@ class Resolver(object):
                             response = dns.query.tcp(request, nameserver,
                                                      timeout, port,
                                                      source=source,
-                                                     source_port=source_port)
+                                                     source_port=source_port,
+                                                     af=socket.AF_INET)
                         else:
                             response = dns.query.udp(request, nameserver,
                                                      timeout, port,
